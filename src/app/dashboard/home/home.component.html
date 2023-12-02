@@ -31,28 +31,83 @@
                 <p>3 days ago</p>
             </div>
         </div>
+   
+    <div class="card">
+        <div class="activity">
+            <i class="fa fa-eye">      </i>
+                <h3>View All</h3>
+      
+        </div>
+        <div class="card-flex">
+            <h4>Teams</h4>
+            <p>25</p>
+        </div>
+        <div class="card-flex">
+            <h4>Nurse complaint</h4>
+            <p>8</p>
+        </div>
+        <div class="card-flex">
+            <h4>Kitchen Staff</h4>
+            <p>15</p>
+        </div>
+        <div class="card-flex last">
+            <h4>Operations</h4>
+            <p>45</p>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="rounded card">
+
+    <div class="badge">
+        <i class="fa fa-users"></i>
+        <h3>Users</h3>
     </div>
 
-    <div class="activity-right">
-        <i class="fa fa-eye">
-            <h3>View All</h3>
-        </i>
+    <div class="badge">
+        <i class="fa fa-users"></i>
+        <h3>IT Support</h3>
     </div>
-    <div class="card-flex">
-        <h4>Teams</h4>
-        <p>25</p>
+
+    <div class="badge">
+        <i class="fa fa-users"></i>
+        <h3>Approvals</h3>
     </div>
-    <div class="card-flex">
-        <h4>Nurse complaint</h4>
-        <p>8</p>
+
+    <div class="badge">
+        <i class="fa fa-users"></i>
+        <h3>Analytics</h3>
     </div>
-    <div class="card-flex">
-        <h4>Kitchen Staff</h4>
-        <p>15</p>
-    </div>
-    <div class="card-flex last">
-        <h4>Operations</h4>
-        <p>45</p>
-    </div>
+
+</div>
+
+<div class=" ">
+<button class=""><i class="fa fa-plus" aria-hidden="true"></i> Generate QR</button>  
+
+
+    
+
+</div>
+<div>
+<div class="long-container">
+    <apx-chart
+        [series]="chartOptions.series"
+        [chart]="chartOptions.chart"
+        [title]="chartOptions.title"
+        [colors]="chartOptions.colors">
+    </apx-chart>
+</div>
+            
+
+        
+        <apx-chart
+            [series]="series"
+            [chart]="chart"
+            [title]="title"
+        ></apx-chart>
+   
+</div>
 </section>
 
