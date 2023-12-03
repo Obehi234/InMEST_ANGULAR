@@ -1,3 +1,7 @@
+.btn-primary {
+  background-color: #29bbbb;
+}
+
 .Welcome-section{
     display: flex;
     justify-content: space-between;
@@ -9,6 +13,8 @@
     display: flex;
     justify-content: space-around;
     width: 100%;
+    padding: 1em;
+   
 }
 
 .activity{
@@ -24,6 +30,8 @@
 .activity h3{
     margin-top: 12px;
     margin-left: 10px;
+    font-size: 14px;
+    margin-left: 0.5rem;
 }
 
 .card{
@@ -31,6 +39,8 @@
     border-radius: 8px;
     width: 100%;
     margin: 16px;
+    font-size: 14px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .right h3{
     margin-top: 16px;
@@ -59,7 +69,6 @@
     height: 200px;
     color: whitesmoke;
     padding: 1rem 1rem;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
    
 }
 .badge{
@@ -70,6 +79,7 @@
   gap: 0.5rem;
   width: 7.5rem;
   height: 7.5rem;
+  color: #0d0c0cc2;
 }
 .badge:hover {
     background-color: #21999d2e;
@@ -80,6 +90,8 @@
 //   Styling for Summary Section
 
 .summary {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     padding: 2rem;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -106,8 +118,9 @@
   //Summary Donut Chart
   .summary-bar {
     display: flex;
+    // flex-direction: row;
     justify-content: space-between;
-    flex-direction: row;
+    align-items: center;
     margin-bottom: 12px;
     width: 100%;
     padding: 0 2rem;
@@ -149,6 +162,7 @@
   .apexcharts-legend.apx-legend-position-left {
     display: none;
   }
+
 
   @media screen and (max-width: 600px) {
     .intro {
