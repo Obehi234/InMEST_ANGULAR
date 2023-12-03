@@ -103,20 +103,40 @@
         <h3>Summary</h3>
       </div>
 
+      
+      <div class="summary-bar">
+        <!-- Summary Pie Chart Set Up -->
+        <div class="round-bar">
+            <apx-chart
+              [series]="chartOptions.series"
+              [chart]="chartOptions.chart"
+              [title]="chartOptions.title"
+              [colors]="chartOptions.colors"
+            ></apx-chart>
+
+            <!-- Set up Side Bars -->
+            <div class="long-container">
+                <div class="long-bar long-bar-one">
+                  <h3>Approved</h3>
+                  <h3>50</h3>
+                </div>
+                <div class="long-bar long-bar-two">
+                  <h3>Requests Sent</h3>
+                  <h3>55</h3>
+                </div>
+                <div class="long-bar long-bar-three">
+                  <h3>Canceled</h3>
+                  <h3>5</h3>
+                </div>
+              </div>
+          </div>  
+      </div>
+
 </div>
 
-<div>
-<div class="long-container">
-    <apx-chart
-        [series]="chartOptions.series"
-        [chart]="chartOptions.chart"
-        [title]="chartOptions.title"
-        [colors]="chartOptions.colors">
-    </apx-chart>
-</div>
-            
+<!-- Set Up Bar Chart Section -->
 
-        
+<div class="bar-chart"> 
         <apx-chart
             [series]="series"
             [chart]="chart"
