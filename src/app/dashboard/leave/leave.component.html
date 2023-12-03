@@ -1,4 +1,3 @@
-
 <div class="req-body">
     <div class="body-head">
       <!-- <h3>Requests</h3> -->
@@ -17,13 +16,11 @@
         </button>
       </div>
     </div>
-    
     <div class="requests-wrapper">
-
+    
         <mat-tab-group dynamicHeight animationDuration="0ms">
             <mat-tab label="Requests">
-    
-    
+
                 <mat-card>
                     <mat-card-content>
                   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
@@ -46,50 +43,13 @@
                     <!-- Weight Column -->
                     <ng-container matColumnDef="type">
                       <th mat-header-cell *matHeaderCellDef> Type </th>
-                      <td mat-cell *matCellDef="let element"> {{element.type}} </td>
-                    </ng-container>
-        
-                    <!-- Symbol Column -->
-                    <ng-container matColumnDef="date">
-                      <th mat-header-cell *matHeaderCellDef> Date </th>
-                      <td mat-cell *matCellDef="let element"> {{element.date}} </td>
-                    </ng-container>
-        
-                    <ng-container matColumnDef="status">
-                      <th mat-header-cell *matHeaderCellDef> Status </th>
-                      <td mat-cell *matCellDef="let element" class="button"> 
-                                
-                      <!-- {{element.status}}  -->
-        
-                      @if (element?.status=='Accepted') {
-                                  <button mat-fab extended color="link" class={{element?.status}}>
-                                    <mat-icon>check</mat-icon>
-                                    {{element?.status}}
-                                  </button>
-                                  
-                      }
-                      
-                      @if(element?.status=="Declined"){
-                                  <button mat-fab extended color="warn" class={{element?.status}}>
-                                    <mat-icon>close</mat-icon>
-                                    {{element?.status}}
-                                  </button>
-                      }
-                      
-                      @if(element?.status=="Pending "){
-                                  <button mat-fab extended color="" class={{element?.status}}>
-                                    <mat-icon>chevron_right</mat-icon>
-                                    {{element?.status}}
-                                  </button>
-                      
-                      } 
-        
+                      <td mat-cell *matCellDef="let element">
+                      <button mat-fab extended class={{element?.type}}>
+                      {{ element.type }}
+                      </button>
                       </td>
                     </ng-container>
         
-                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-                  </table>
-                    </mat-card-content>
-                  </mat-card>
+
+
         
