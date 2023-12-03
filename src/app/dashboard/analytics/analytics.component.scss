@@ -1,15 +1,29 @@
 .analytics {
+    padding: 10px;
+    background-color: #F6F6F6;
+}
+.card {
     display: flex;
+    flex-direction: row;
+    width: auto;
+    background-color: #F6F6F6;
+
 }
 
 .card-body{
     margin: 1rem;
-    border: 1px solid grey;
-    background-color: rgb(240, 240, 240);
+    // border: 1px solid grey;
+    background-color: rgb(255, 255, 255);
     border-radius: 5px;
     display: flex;
     width: 100%;
     padding: 2rem;
+}
+
+.text-display{
+    // margin: 5px;
+    margin-left: 15px;
+    text-align: center;
 }
 
 i{
