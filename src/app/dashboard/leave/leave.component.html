@@ -85,4 +85,21 @@
       
                     </td>
 
-                
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+                </mat-card-content>
+              </mat-card>
+    
+    
+              
+            </mat-tab>
+            <mat-tab label="Total Requests">
+              <h2>For Roch's Team</h2>
+            </mat-tab>
+        </mat-tab-group>
+    
+    </div>
+    </div>             
