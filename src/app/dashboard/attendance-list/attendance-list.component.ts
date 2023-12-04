@@ -1,13 +1,23 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
+export interface Student {
+  studentNo: number;
+  name: string;
+  email: string;
+  present: boolean;
+}
 
 @Component({
   selector: 'app-attendance-list',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './attendance-list.component.html',
-  styleUrl: './attendance-list.component.scss'
+  templateUrl: '../attendance-list/attendance-list.component.html',
+  styleUrls: ['../attendance-list/attendance-list.component.scss'],
 })
 export class AttendanceListComponent {
+  displayedColumns: string[] = ['studentNo', 'name', 'email', 'status'];
 
+  students: Student[] = [
+    { studentNo: 1, name: 'Nkwi Loh', email: 'loh.nkwi@meltwater.org', present: true },
+    // Add other students similarly...
+    { studentNo: 51, name: 'Student 51', email: 'student51@example.com', present: false },
+  ];
 }

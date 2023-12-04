@@ -21,7 +21,7 @@ export class AttendanceComponent implements OnInit{
     this.getAttendance()
     console.log(this.attendance)
   }
-
+  
   getAttendance(){
     this.attendanceService.getAttendance().subscribe((resp:any)=>{
        this.attendance = resp
