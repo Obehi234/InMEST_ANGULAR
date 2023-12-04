@@ -12,6 +12,7 @@ import {MatIconModule} from '@angular/material/icon';
   styleUrl: './it-support.component.scss'
 })
 export class ItSupportComponent implements OnInit {
+attendance: any;
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }

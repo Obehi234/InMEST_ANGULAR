@@ -1,121 +1,148 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$inmest-web-primary: mat.define-palette(mat.$indigo-palette);
+$inmest-web-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$inmest-web-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$inmest-web-theme: mat.define-light-theme((
+  color: (
+    primary: $inmest-web-primary,
+    accent: $inmest-web-accent,
+    warn: $inmest-web-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($inmest-web-theme);
+
 /* You can add global styles to this file, and also import other style files */
-
-.relative-pos{
-    position: relative;
-    background-color: black;
-    height: 1300px;
-    width: 300px;
-    left: 30px;
-    top: 30px;
-    color: white;
-}
-.absolute-pos{
-    position: absolute;
-    background-color: rgb(145, 145, 12);
-    bottom: 0px;
-    padding: 10px;
-    border-radius: 0 12px 0 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.fixed-pos{
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: rgb(182, 115, 27);
-    padding: 20px;
-    color: white;
-    font-size: xx-large ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 10px 10px 72px 0px rgba(32,32,32,0.75);
-    font-weight: 800;
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fafafa;
+  width: 100vw;
 }
 
-.sticky-pos{
-    position: sticky;
-    background: #0084ff;
-    background: linear-gradient(322deg,#0084ff 0%, #00ff8f 80%);
-    background: -webkit-linear-gradient(322deg,#0084ff 0%, #00ff8f 80%);
-    background: -moz-linear-gradient(322deg,#0084ff 0%, #00ff8f 80%);
-    top: 5px;
-    list-style: none;
-    padding-left: 0px;
-    display: flex;
-    justify-content: flex-end;
-    padding: 20px 10px;
-    font-weight: 600;
-    font-size: large;
-    border-radius: 10px;
-    z-index: 100;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #21999d;
+  padding: 10px 8rem;
 }
 
-.sticky-pos > li{
-    margin-left: 10px;
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 5px 10px;
 }
 
-body{
-    margin: 0px;
-    font-family: Arial, Helvetica, sans-serif;
+.nav li {
+  margin-right: 20px;
+  list-style: none;
 }
 
-.wrapper{
-    display: flex;
-    flex-direction: row;
+.bell {
+  border: 1px #fff solid;
+  border-radius: 50%;
+  padding: 10px 1rem;
 }
 
-
-.wrapper .sideNav {
-    width: 250px;
-    background-color: white;
-    height: 100vh;
-    color: #29bbbb;
+.wrapper {
+  display: flex;
+  max-width: 100%;
+  /* padding: 1rem 8rem; */
 }
 
-.wrapper .logo{
-    width: 80px;
-    margin-left: 20px;
-    margin-top: 20px;
+.next {
+  margin-bottom: 2rem;
 }
 
-.wrapper .sideNav .menu{
-    list-style: none;
-    padding-left: 20px;
+.overlay {
+  padding: 2rem 8rem;
+}
+.wrapper .side-nav {
+  min-width: 300px;
+  padding: 20px;
 }
 
-.wrapper .sideNav .menu a{
-    font-weight: 500;   
-    display: flex;
-    padding: 10px 20px;
-    align-items: center;
-    cursor: pointer;
-    margin-bottom: 5px;
-
+.logo {
+  width: 100px;
 }
-.wrapper .sideNav .menu a:hover{
-    background-color: #29bbbb;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 20px;
-}
-.wrapper .sideNav .menu .menuIcons{
-    width: 20px;
-    margin-right: 10px;
+.wrapper .side-nav .menu {
+  list-style: none;
 }
 
-.wrapper .sideNav .menu .menuActive{
-    background-color: #29bbbb;
-    color: white;
-    border-radius: 20px;
-    padding: 10px 20px;
+.wrapper .side-nav .menu .menu-active {
+  background-color: #00c8c8;
+  color: white;
 }
 
+.menu li:active svg {
+  border: 1px solid white !important
+}
 
+.menu li:active svg path,
+.menu li.menu-active svg path {
+  fill: white !important; /* Change the fill color to white */
+}
+
+.wrapper .side-nav .menu li {
+  padding: 10px;
+  color: #00cbcb;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: all 0.4s ease;
+  border-radius: 25px;
+}
+
+.wrapper .side-nav .menu .sidemenu-icon {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.wrapper .side-nav span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.active {
+  background: "white";
+}
+
+.main-content-wrapper {
+  width: 100%;
+  padding-inline: 0 .75rem;
+}
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-mdc-tab .mdc-tab-indicator__content--underline {
+  border-color: #21999d !important;
+}
