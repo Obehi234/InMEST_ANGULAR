@@ -50,7 +50,7 @@
 }
 
 .card {
-  border: 1px solid #ddd; 
+  border: 1px solid #ddd; /* Add border or other styling as needed */
   border-radius: 8px;
   width: 100%;
   margin: 16px;
@@ -86,7 +86,9 @@
   justify-content: space-between;
   align-items: center;
   text-align: center;
+  width: 100%;
   padding: 2rem;
+  margin: 16px;
   border-radius: 1rem;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
@@ -238,6 +240,7 @@
     margin-bottom: 12px;
     width: 100%;
     padding: 0rem;
+    //   border-bottom: 1px solid #7070706c;
   }
 
   .long-container {
