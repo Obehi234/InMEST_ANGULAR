@@ -11,6 +11,7 @@ import { HomeComponent } from './dashboard/home/home.component';
 // import { ItSupportComponent } from './dashboard/it-support/it-support.component';
 import { AttendanceRegisterComponent } from './dashboard/attendance-register/attendance-register.component';
 import { AttendanceInnerComponent } from './dashboard/attendance-inner/attendance-inner.component';
+import { ItSupportComponent } from './dashboard/it-support/it-support.component';
 
 export const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -26,7 +27,7 @@ export const routes: Routes = [
     {
         path: 'settings',
         component: SettingsComponent,
-      }
-//   {path: 'it-support', component: ItSupportComponent}
-
+      },
+    {path : 'leave', component: LeaveComponent},
+    {path:'It-Support', component:ItSupportComponent}
 ];
